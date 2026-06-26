@@ -8,8 +8,6 @@
 <meta property="og:title" content="Cursor Hackathon Sudbury 2026 — Build the North" />
 <meta property="og:description" content="Everything participants need before and during the hackathon." />
 <meta property="og:type" content="website" />
-<link rel="icon" type="image/svg+xml" href="cursor-mark.svg" />
-<link rel="apple-touch-icon" href="cursor-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -68,10 +66,7 @@
     gap: 16px;
   }
   .brand { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 16px; }
-  .brand-logo { width: 24px; height: 24px; border-radius: 6px; display: block; }
-  .cursor-lockup { display: inline-flex; align-items: center; gap: 9px; }
-  .cursor-lockup img { width: 20px; height: 20px; border-radius: 5px; }
-  .cursor-lockup span { font-family: 'Space Grotesk'; font-weight: 600; color: var(--text); }
+  .brand .dot { width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 14px var(--accent-glow); }
   .nav-links { display: flex; gap: 26px; align-items: center; }
   .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--text); }
@@ -269,7 +264,7 @@
 <!-- NAV -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><img src="cursor-mark.svg" alt="Cursor" class="brand-logo" /> Cursor Hackathon Sudbury</a>
+    <a href="#top" class="brand"><span class="dot"></span> Cursor Hackathon Sudbury</a>
     <nav class="nav-links">
       <a href="#tracks">Tracks</a>
       <a href="#start">Start Here</a>
@@ -288,8 +283,7 @@
   <div class="hero-glow"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <span class="badge"><img src="cursor-mark.svg" alt="" style="width:16px;height:16px;border-radius:4px;" /> Official Cursor Community Event</span>
-    <span class="badge" style="margin-left:8px;"><span class="pulse"></span> Saturday, June 27 · Laurentian University, Sudbury ON</span>
+    <span class="badge"><span class="pulse"></span> Saturday, June 27 · Laurentian University, Sudbury ON</span>
     <h1>Cursor Hackathon<br>Sudbury 2026</h1>
     <div class="tagline">Build the North</div>
     <p class="lede">An AI-focused building competition tackling the real opportunities and challenges of Northern Ontario. Everything you need — registration, Discord, tool setup, credits, and submission — all in one place.</p>
@@ -366,7 +360,7 @@
     <p class="section-sub">A focused toolkit for building and shipping fast. Most offer free credits or access for the event.</p>
     <div class="grid grid-3">
       <div class="card">
-        <h3><img src="cursor-mark.svg" alt="" style="width:24px;height:24px;border-radius:6px;" /> Cursor</h3>
+        <h3><span class="ic">🖱️</span> Cursor</h3>
         <p>The AI code editor for the hackathon — generate, explain, debug, and ship code.</p>
         <a class="link" href="https://cursor.com" target="_blank" rel="noopener">Open Cursor →</a>
       </div>
@@ -658,7 +652,7 @@
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="cursor-lockup" style="margin-bottom:10px;"><img src="cursor-mark.svg" alt="Cursor" style="width:26px;height:26px;border-radius:6px;" /><span style="font-size:18px;">Cursor Hackathon Sudbury 2026</span></div>
+      <div class="foot-brand">Cursor Hackathon Sudbury 2026</div>
       <div style="color:var(--muted);font-size:14px;max-width:300px;">Build the North · Saturday, June 27<br>Cliff Fielding Building, Laurentian University<br>935 Ramsey Lake Rd, Sudbury, ON</div>
       <div style="color:var(--faint);font-size:13px;margin-top:14px;max-width:300px;">Hosted by Athif Shaffy, Cheick Ismael Maiga, Baljinder Maan &amp; Hasan Shahriar</div>
     </div>
@@ -686,7 +680,7 @@
   </div>
   <div class="foot-bottom">
     <span>© 2026 Cursor Hackathon Sudbury · Participant Resources</span>
-    <span style="display:inline-flex;align-items:center;gap:7px;">Built with <img src="cursor-mark.svg" alt="Cursor" style="width:15px;height:15px;border-radius:4px;vertical-align:middle;" /> Cursor</span>
+    <span>Made with Cursor 🖱️</span>
   </div>
 </footer>
 
