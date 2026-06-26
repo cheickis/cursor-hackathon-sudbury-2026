@@ -10,7 +10,7 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg: #07080c;
@@ -33,7 +33,7 @@
   html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.65;
@@ -43,7 +43,7 @@
 
   a { color: inherit; text-decoration: none; }
 
-  h1, h2, h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height: 1.15; letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.15; letter-spacing: -0.02em; }
 
   ::selection { background: var(--accent-glow); }
 
@@ -65,13 +65,13 @@
     justify-content: space-between;
     gap: 16px;
   }
-  .brand { display: flex; align-items: center; font-family: 'Space Grotesk'; font-weight: 700; font-size: 16px; }
+  .brand { display: flex; align-items: center; font-family: 'Montserrat'; font-weight: 700; font-size: 16px; }
   .nav-links { display: flex; gap: 26px; align-items: center; }
   .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--text); }
   .nav-cta {
     background: linear-gradient(135deg, var(--accent), #5a3fd6);
-    color: #fff; padding: 9px 18px; border-radius: 10px; font-size: 14px; font-weight: 600;
+    color: #fff; padding: 9px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;
     box-shadow: 0 6px 20px var(--accent-glow); transition: transform .15s, box-shadow .2s;
   }
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 28px var(--accent-glow); }
@@ -85,7 +85,7 @@
   section { padding: 88px 24px; }
   .wrap { max-width: var(--maxw); margin: 0 auto; }
   .eyebrow { color: var(--accent-2); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
-  h2.section-title { font-size: clamp(28px, 4vw, 40px); margin-bottom: 12px; }
+  h2.section-title { font-size: clamp(30px, 5vw, 50px); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
   .section-sub { color: var(--muted); max-width: 620px; margin-bottom: 44px; font-size: 16px; }
 
   /* ---------- Hero ---------- */
@@ -126,21 +126,21 @@
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     margin-bottom: 18px;
   }
-  .hero .tagline { font-family: 'Space Grotesk'; font-size: clamp(18px, 3vw, 24px); color: var(--accent-2); font-weight: 600; margin-bottom: 22px; }
+  .hero .tagline { font-family: 'Montserrat'; font-size: clamp(18px, 3vw, 24px); color: var(--accent-2); font-weight: 600; margin-bottom: 22px; }
   .hero p.lede { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 auto 38px; }
   .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn {
-    padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 15px;
-    transition: transform .15s, box-shadow .2s, background .2s; display: inline-flex; align-items: center; gap: 9px;
+    padding: 14px 30px; border-radius: 999px; font-weight: 600; font-size: 15px;
+    transition: transform .15s, box-shadow .2s, background .2s, border-color .2s; display: inline-flex; align-items: center; gap: 9px;
   }
   .btn-primary { background: linear-gradient(135deg, var(--accent), #5a3fd6); color: #fff; box-shadow: 0 8px 30px var(--accent-glow); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 40px var(--accent-glow); }
-  .btn-ghost { background: var(--card); border: 1px solid var(--border); color: var(--text); }
-  .btn-ghost:hover { background: var(--card-hover); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; border: 2px solid rgba(124, 92, 255, 0.45); color: var(--text); }
+  .btn-ghost:hover { background: rgba(124, 92, 255, 0.12); border-color: rgba(124, 92, 255, 0.75); transform: translateY(-2px); }
 
   .hero-meta { display: flex; gap: 36px; justify-content: center; flex-wrap: wrap; margin-top: 56px; }
   .hero-meta .item { text-align: center; }
-  .hero-meta .k { font-family: 'Space Grotesk'; font-size: 22px; font-weight: 700; color: #fff; }
+  .hero-meta .k { font-family: 'Montserrat'; font-size: 22px; font-weight: 700; color: #fff; }
   .hero-meta .v { font-size: 13px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
 
   /* ---------- Cards / grids ---------- */
@@ -160,6 +160,17 @@
   .card a.link { color: var(--accent-2); font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; }
   .card a.link:hover { gap: 9px; }
 
+  /* judges */
+  .judges-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 760px) { .judges-grid { grid-template-columns: 1fr; } }
+  .judge { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; display: flex; gap: 20px; transition: border-color .2s, transform .2s, background .2s; }
+  .judge:hover { border-color: #34384a; transform: translateY(-3px); background: var(--card-hover); }
+  .judge img { width: 104px; height: 104px; border-radius: 14px; object-fit: cover; object-position: center top; flex: 0 0 auto; border: 1px solid var(--border); background: var(--bg-soft); }
+  .judge .j-name { font-family: 'Montserrat'; font-weight: 700; font-size: 18px; line-height: 1.25; }
+  .judge .j-role { color: var(--accent-2); font-size: 13px; font-weight: 600; margin: 4px 0 11px; }
+  .judge .j-bio { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
+  @media (max-width: 480px) { .judge { flex-direction: column; } .judge img { width: 88px; height: 88px; } }
+
   /* steps */
   .steps { counter-reset: step; display: grid; gap: 14px; }
   .step {
@@ -172,7 +183,7 @@
     counter-increment: step; flex: 0 0 auto;
     width: 32px; height: 32px; border-radius: 9px;
     background: linear-gradient(135deg, var(--accent), #5a3fd6); color: #fff;
-    display: grid; place-items: center; font-weight: 700; font-size: 14px; font-family: 'Space Grotesk';
+    display: grid; place-items: center; font-weight: 700; font-size: 14px; font-family: 'Montserrat';
   }
   .step .num::before { content: counter(step); }
   .step .body { flex: 1; }
@@ -247,7 +258,7 @@
   /* ---------- Footer ---------- */
   footer { border-top: 1px solid var(--border); padding: 48px 24px 60px; }
   .foot-inner { max-width: var(--maxw); margin: 0 auto; display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
-  .foot-brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+  .foot-brand { font-family: 'Montserrat'; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
   .foot-col h5 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); margin-bottom: 12px; }
   .foot-col a { display: block; color: var(--muted); font-size: 14px; margin-bottom: 8px; transition: color .2s; }
   .foot-col a:hover { color: var(--text); }
@@ -266,8 +277,10 @@
     <a href="#top" class="brand">Cursor Hackathon Sudbury</a>
     <nav class="nav-links">
       <a href="#tracks">Tracks</a>
-      <a href="#start">Start Here</a>
       <a href="#tools">Tools</a>
+      <a href="#judges">Judges</a>
+      <a href="#prizes">Prizes</a>
+      <a href="#start">Start Here</a>
       <a href="#setup">Setup</a>
       <a href="#credits">Credits</a>
       <a href="#submit">Submit</a>
@@ -324,37 +337,8 @@
   </div>
 </section>
 
-<!-- START HERE -->
-<section id="start">
-  <div class="wrap">
-    <div class="eyebrow">Before the event</div>
-    <h2 class="section-title">Start here</h2>
-    <p class="section-sub">Complete these steps before the hackathon so you're ready to build from the moment you arrive.</p>
-    <div class="steps">
-      <div class="step"><div class="num"></div><div class="body"><a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener">Register on Luma</a>, secure your spot for the event.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join the Discord channel</a>, all updates and support happen here.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://forms.gle/S3vVfueTa6XHu2pU8" target="_blank" rel="noopener">Submit your team</a> using the team registration form.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com/downloads" target="_blank" rel="noopener">Install Cursor</a>, the AI code editor we'll use.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com" target="_blank" rel="noopener">Create a Cursor account</a>.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://lovable.dev" target="_blank" rel="noopener">Create a Lovable account</a>.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://apify.com" target="_blank" rel="noopener">Create an Apify account</a>.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Create a Valsea / Valencia API account</a>.</div></div>
-      <div class="step"><div class="num"></div><div class="body"><a href="https://devpost.com" target="_blank" rel="noopener">Create or sign in to Devpost</a>.</div></div>
-    </div>
-
-    <h4 style="font-family:'Space Grotesk';font-size:18px;margin:38px 0 16px;">What to bring</h4>
-    <div class="pills">
-      <span class="pill">💻 Laptop</span>
-      <span class="pill">🔌 Charger</span>
-      <span class="pill">⌨️ Cursor installed</span>
-      <span class="pill">📝 Devpost account</span>
-      <span class="pill">💡 A project idea, dataset, or problem</span>
-    </div>
-  </div>
-</section>
-
 <!-- TOOLS -->
-<section id="tools" style="background:var(--bg-soft);">
+<section id="tools">
   <div class="wrap">
     <div class="eyebrow">What you'll use</div>
     <h2 class="section-title">Main tools</h2>
@@ -390,6 +374,128 @@
         <p>Announcements, questions, support, and team communication throughout the event.</p>
         <a class="link" href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join Discord →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- JUDGES -->
+<section id="judges" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">Who's evaluating</div>
+    <h2 class="section-title">Meet the judges</h2>
+    <p class="section-sub">A panel of founders, engineers, and data scientists from across Northern Ontario's tech, mining, and healthcare communities.</p>
+    <div class="judges-grid">
+      <div class="judge">
+        <img src="assets/judges/charles-ramcharan.jpg" alt="Dr. Charles Ramcharan" />
+        <div>
+          <div class="j-name">Dr. Charles Ramcharan</div>
+          <div class="j-role">Founder, Tunik</div>
+          <p class="j-bio">Dr. Ramcharan earned all three of his degrees in Aquatic Ecology from the University of Toronto before academic careers in Wisconsin, New Brunswick, Germany, and Louisiana, finally settling at Laurentian University in Sudbury. He left Laurentian in 2021 to pursue his startup, Tunik, which makes water-quality devices that can be deployed autonomously, a feat requiring real innovation. Tunik now has five international patents pending, and a joint venture with Makk Designs of Midland, Ontario will bring it to market this fall.</p>
+        </div>
+      </div>
+      <div class="judge">
+        <img src="assets/judges/brent-ritchie.jpg" alt="Brent Ritchie" />
+        <div>
+          <div class="j-name">Brent Ritchie</div>
+          <div class="j-role">Senior Systems Analyst &amp; Developer, Glencore · Founder, Lighthouse Analytics · Professor, Cambrian College</div>
+          <p class="j-bio">Brent brings 20 years of experience bridging industrial data management and modern software architecture. At Glencore's Sudbury Integrated Nickel Operations he operationalizes knowledge graphs and machine learning to optimize manufacturing. As founder of Lighthouse Analytics, he applies knowledge engineering and Retrieval-Augmented Generation (RAG) to break down industrial data silos. He also teaches mobile and web development at Cambrian College and is an active participant in the W3C CSS and HTML Working Groups and the WICG Open-UI Working Group, with a deep focus on .NET, Kotlin Multiplatform, and graph databases like Neo4j.</p>
+        </div>
+      </div>
+      <div class="judge">
+        <img src="assets/judges/rakshitha-rodrigo.jpg" alt="Rakshitha M. Rodrigo" />
+        <div>
+          <div class="j-name">Rakshitha M. Rodrigo</div>
+          <div class="j-role">Software Engineer, Becker Mining Systems Canada</div>
+          <p class="j-bio">A seasoned software engineer with a strong background in iOS development, Rakshitha has worked on projects that push the boundaries of innovation, with a proven track record of delivering high-quality solutions and leading talented engineering teams. A passionate advocate for innovation and space exploration, he stays at the forefront of emerging technologies and loves collaborating with like-minded people to push the boundaries of what's possible.</p>
+        </div>
+      </div>
+      <div class="judge">
+        <img src="assets/judges/adrian-hermoza-bayona.jpg" alt="Adrián Hermoza-Bayona" />
+        <div>
+          <div class="j-name">Adrián Hermoza-Bayona</div>
+          <div class="j-role">Data Scientist, Canadian Shield Health Care Services Inc.</div>
+          <p class="j-bio">Adrián is a Data Scientist and Development Team Lead at Canadian Shield Health Care Services. With years of experience in the healthcare industry, he specializes in data science, artificial intelligence, and technology product development, building impactful AI solutions while prioritizing data governance, information security, and data privacy. He brings a technical perspective centered on innovation, feasibility, responsible AI, security, and real-world impact.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIZES -->
+<section id="prizes">
+  <div class="wrap">
+    <div class="eyebrow">What you're competing for</div>
+    <h2 class="section-title">Prizes</h2>
+    <p style="font-family:'Montserrat';font-weight:700;font-size:clamp(20px,3vw,30px);color:var(--accent-2);margin:0 0 16px;">Up to $2,000+ in prizes and credits</p>
+    <p class="section-sub">Top projects across every track take home overall placements, plus a set of special awards for standout work in specific areas.</p>
+
+    <h4 style="font-family:'Montserrat';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Overall placements</h4>
+    <div class="grid grid-3" style="margin-bottom:34px;">
+      <div class="card" style="border-color:rgba(124,92,255,0.5);">
+        <h3><span class="ic" aria-hidden="true">🥇</span> 1st Place Overall</h3>
+        <p>Awarded to the strongest overall project across all three tracks.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🥈</span> 2nd Place Overall</h3>
+        <p>Runner-up for the best overall project of the hackathon.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🥉</span> 3rd Place Overall</h3>
+        <p>Third place among all projects across every track.</p>
+      </div>
+    </div>
+
+    <h4 style="font-family:'Montserrat';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Special prize tracks</h4>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🧠</span> Best Use of Nemotron</h3>
+        <p>Win NVIDIA Brev credits. Nemotron is an open model family for reasoning, code, and agentic tasks.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🗄️</span> Best Use of TiDB</h3>
+        <p>For the best project built on TiDB by PingCAP.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🎙️</span> Best Use of Valsea</h3>
+        <p>Win Valsea API credits for the best voice or audio experience built with Valsea.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">🎨</span> Best UI / UX</h3>
+        <p>Cambrian swag for the most polished, intuitive, and delightful interface.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic" aria-hidden="true">⚙️</span> Best Technical Implementation</h3>
+        <p>For the most impressive engineering and technical execution under the hood.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- START HERE -->
+<section id="start" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">Before the event</div>
+    <h2 class="section-title">Start here</h2>
+    <p class="section-sub">Complete these steps before the hackathon so you're ready to build from the moment you arrive.</p>
+    <div class="steps">
+      <div class="step"><div class="num"></div><div class="body"><a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener">Register on Luma</a>, secure your spot for the event.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join the Discord channel</a>, all updates and support happen here.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://forms.gle/S3vVfueTa6XHu2pU8" target="_blank" rel="noopener">Submit your team</a> using the team registration form.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com/downloads" target="_blank" rel="noopener">Install Cursor</a>, the AI code editor we'll use.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com" target="_blank" rel="noopener">Create a Cursor account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://lovable.dev" target="_blank" rel="noopener">Create a Lovable account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://apify.com" target="_blank" rel="noopener">Create an Apify account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Create a Valsea / Valencia API account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://devpost.com" target="_blank" rel="noopener">Create or sign in to Devpost</a>.</div></div>
+    </div>
+
+    <h4 style="font-family:'Montserrat';font-size:18px;margin:38px 0 16px;">What to bring</h4>
+    <div class="pills">
+      <span class="pill">💻 Laptop</span>
+      <span class="pill">🔌 Charger</span>
+      <span class="pill">⌨️ Cursor installed</span>
+      <span class="pill">📝 Devpost account</span>
+      <span class="pill">💡 A project idea, dataset, or problem</span>
     </div>
   </div>
 </section>
@@ -617,12 +723,12 @@
     <div class="eyebrow">Made possible by</div>
     <h2 class="section-title">Sponsors &amp; partners</h2>
     <p class="section-sub">Presented by the Cursor Sudbury, Canada community, with support from these partners.</p>
-    <h4 style="font-family:'Space Grotesk';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Sponsors</h4>
+    <h4 style="font-family:'Montserrat';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Sponsors</h4>
     <div class="pills" style="margin-bottom:30px;">
       <span class="pill" style="font-size:15px;padding:8px 16px;">Key Logic Software Solutions</span>
       <span class="pill" style="font-size:15px;padding:8px 16px;">The Foundry / La Fonderie</span>
     </div>
-    <h4 style="font-family:'Space Grotesk';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Supporting partners</h4>
+    <h4 style="font-family:'Montserrat';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Supporting partners</h4>
     <div class="pills">
       <span class="pill" style="font-size:15px;padding:8px 16px;">Cursor</span>
       <span class="pill" style="font-size:15px;padding:8px 16px;">TiDB by PingCAP</span>
@@ -649,6 +755,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
