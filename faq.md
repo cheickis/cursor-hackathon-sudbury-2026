@@ -2,13 +2,13 @@
 
 ## When is the event?
 
-The event is on Saturday.
+The event is on **Saturday, June 27, 2026**.
 
 ## Where do I register?
 
 Register on Luma:
 
-https://luma.com/cursor-sudbury-canada
+[Register on Luma](https://luma.com/cursor-sudbury-canada)
 
 ## Where do I get event updates?
 
@@ -16,7 +16,7 @@ All important updates will be shared through the Discord channel.
 
 Please join the Discord before the event:
 
-https://discord.gg/Px5hHgSCt
+[Join the Discord](https://discord.gg/Px5hHgSCt)
 
 ## Do I need to join Discord?
 
@@ -31,7 +31,7 @@ Yes. Participants should join the Discord channel for:
 
 Discord invite:
 
-https://discord.gg/Px5hHgSCt
+[Join the Discord](https://discord.gg/Px5hHgSCt)
 
 ## Do I need a GitHub account?
 
@@ -43,9 +43,9 @@ The event will use Devpost for project submissions.
 
 Yes. Devpost will be used for final project submission.
 
-Go to:
+Create or sign in here:
 
-https://devpost.com
+[Devpost](https://devpost.com)
 
 The official event submission link will be shared by the organizers.
 
@@ -53,13 +53,13 @@ The official event submission link will be shared by the organizers.
 
 Yes. Please install Cursor before the event:
 
-https://cursor.com/downloads
+[Download Cursor](https://cursor.com/downloads)
 
 ## Do I need a Cursor account?
 
 Yes. Please create a Cursor account before the event:
 
-https://cursor.com
+[Create a Cursor Account](https://cursor.com)
 
 ## Do I need to know how to code?
 
@@ -77,6 +77,8 @@ Make sure you understand and test the code you use.
 
 Yes. Lovable can help you build a web app or prototype quickly.
 
+[Open Lovable](https://lovable.dev)
+
 ## How do I activate Lovable credits?
 
 Go to the [Credits and API Access](credits.md) page and follow the Lovable instructions.
@@ -91,6 +93,8 @@ No. The code is only for registered participants and should not be shared outsid
 
 Yes. Apify can be used for web scraping, automation, data collection, and AI workflows.
 
+[Open Apify](https://apify.com)
+
 ## How do I activate Apify credits?
 
 Go to the [Credits and API Access](credits.md) page and follow the Apify instructions.
@@ -100,6 +104,8 @@ If an event code is available, it will be shared with registered participants.
 ## Can I use Valsea / Valencia API?
 
 Yes. Follow the instructions on the [Credits and API Access](credits.md) page.
+
+[Open Valsea Billing](https://valsea.ai/dashboard/billing)
 
 ## What does the Valsea / Valencia Free plan include?
 
@@ -155,4 +161,4 @@ Yes. You can bring an idea, but the main building should happen during the hacka
 
 Check this FAQ first.
 
-If your question is not answered here, ask in the Discord channel or speak with one of the organizers during the event.
+If your question is not answered here, ask in the [Discord channel](https://discord.gg/Px5hHgSCt) or speak with one of the organizers during the event.

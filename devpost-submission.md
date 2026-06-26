@@ -2,6 +2,10 @@
 
 Devpost will be used for final project submissions.
 
+Create or sign in to Devpost here:
+
+[Devpost](https://devpost.com)
+
 The official Devpost event link will be shared by the organizers.
 
 ---
@@ -40,10 +44,10 @@ Your project description should answer:
 
 Please mention which tools your team used, such as:
 
-- Cursor
-- Lovable
-- Apify
-- Valsea / Valencia API
+- [Cursor](https://cursor.com)
+- [Lovable](https://lovable.dev)
+- [Apify](https://apify.com)
+- [Valsea / Valencia API](https://valsea.ai/dashboard/billing)
 - Other AI tools
 - Other APIs, datasets, or libraries
 
@@ -81,4 +85,6 @@ Before submitting on Devpost, check that:
 
 ## Need Help?
 
-Ask an organizer if you have trouble submitting on Devpost.
+Check the [FAQ](faq.md) first.
+
+If your question is not answered there, ask in the [Discord channel](https://discord.gg/Px5hHgSCt) or speak with one of the organizers during the event.

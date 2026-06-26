@@ -8,55 +8,52 @@ This page contains the main information participants need before and during the 
 
 ## Event
 
-**Date:** Saturday
-**Registration:** https://luma.com/cursor-sudbury-canada
+**Date:** Saturday, June 27, 2026  
 
-## Join the Discord
+**Registration:** [Register on Luma](https://luma.com/cursor-sudbury-canada)  
 
-All participants should join the Discord channel for event updates, announcements, support, team formation, and last-minute information.
-
-**Discord invite:** https://discord.gg/Px5hHgSCt
+**Discord:** [Join the Discord](https://discord.gg/Px5hHgSCt)
 
 ## Start Here
 
 Before the event, please complete these steps:
 
-1. Register on Luma: https://luma.com/cursor-sudbury-canada
-2. Join the Discord channel: https://discord.gg/Px5hHgSCt
-3. Install Cursor: https://cursor.com/downloads
-4. Create a Cursor account: https://cursor.com
-5. Create a Lovable account: https://lovable.dev
-6. Create an Apify account: https://apify.com
-7. Create a Valsea / Valencia API account: https://valsea.ai/dashboard/billing
-8. Create or sign in to Devpost for project submission: https://devpost.com
+1. [Register on Luma](https://luma.com/cursor-sudbury-canada)
+2. [Join the Discord channel](https://discord.gg/Px5hHgSCt)
+3. [Install Cursor](https://cursor.com/downloads)
+4. [Create a Cursor account](https://cursor.com)
+5. [Create a Lovable account](https://lovable.dev)
+6. [Create an Apify account](https://apify.com)
+7. [Create a Valsea / Valencia API account](https://valsea.ai/dashboard/billing)
+8. [Create or sign in to Devpost](https://devpost.com)
 
 ## Important Pages
 
-* [Tool Setup Guide](tool-setup.md)
-* [Credits and API Access](credits.md)
-* [Devpost Submission Guide](devpost-submission.md)
-* [FAQ](faq.md)
+- [Tool Setup Guide](tool-setup.md)
+- [Credits and API Access](credits.md)
+- [Devpost Submission Guide](devpost-submission.md)
+- [FAQ](faq.md)
 
 ## What to Bring
 
 Please bring:
 
-* Laptop
-* Charger
-* Cursor installed
-* Devpost account or ability to create one
-* Any project idea, dataset, or problem you want to explore
+- Laptop
+- Charger
+- Cursor installed
+- Devpost account or ability to create one
+- Any project idea, dataset, or problem you want to explore
 
 ## Main Tools
 
 During the hackathon, participants may use:
 
-* Cursor for AI-assisted coding
-* Devpost for final project submission
-* Lovable for quickly building web apps and prototypes
-* Apify for web automation, scraping, and data workflows
-* Valsea / Valencia API for voice, audio, or related AI features
-* Discord for announcements, questions, support, and team communication
+- [Cursor](https://cursor.com) for AI-assisted coding
+- [Devpost](https://devpost.com) for final project submission
+- [Lovable](https://lovable.dev) for quickly building web apps and prototypes
+- [Apify](https://apify.com) for web automation, scraping, and data workflows
+- [Valsea / Valencia API](https://valsea.ai/dashboard/billing) for voice, audio, or related AI features
+- [Discord](https://discord.gg/Px5hHgSCt) for announcements, questions, support, and team communication
 
 ## Tool Credits and API Access
 
@@ -84,4 +81,4 @@ Please check the FAQ first:
 
 [Open FAQ](faq.md)
 
-If your question is not answered there, ask in the Discord channel or speak with one of the organizers during the event.
+If your question is not answered there, ask in the [Discord channel](https://discord.gg/Px5hHgSCt) or speak with one of the organizers during the event.

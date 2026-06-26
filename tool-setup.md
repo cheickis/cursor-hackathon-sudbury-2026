@@ -10,10 +10,10 @@ Cursor is the AI code editor we will use during the hackathon.
 
 ### Create a Cursor Account
 
-1. Go to https://cursor.com
+1. Go to [Cursor](https://cursor.com).
 2. Click **Sign in** or **Get started**.
 3. Create an account using your email, Google account, or another available sign-in option.
-4. Download Cursor: https://cursor.com/downloads
+4. Download Cursor: [Cursor Downloads](https://cursor.com/downloads)
 5. Install Cursor.
 6. Open Cursor and sign in.
 
@@ -85,6 +85,10 @@ Participants should use Devpost to submit:
 - What was built during the hackathon
 - Any additional resources required by the organizers
 
+Create or sign in to Devpost here:
+
+[Devpost](https://devpost.com)
+
 The official Devpost event link will be shared by the organizers.
 
 More details are available in the [Devpost Submission Guide](devpost-submission.md).
@@ -95,7 +99,7 @@ More details are available in the [Devpost Submission Guide](devpost-submission.
 
 Lovable can help you quickly create web apps, dashboards, and prototypes.
 
-1. Go to https://lovable.dev
+1. Go to [Lovable](https://lovable.dev).
 2. Create an account or sign in.
 3. Start a new project.
 4. Describe what you want to build.
@@ -115,7 +119,7 @@ Lovable is useful for:
 
 Apify can be used for web scraping, automation, data collection, and agent workflows.
 
-1. Go to https://apify.com
+1. Go to [Apify](https://apify.com).
 2. Create an account or sign in.
 3. Open the Apify Console.
 4. Create or use an Actor.
@@ -136,7 +140,7 @@ Apify is useful for:
 
 Use Valsea / Valencia API for voice, audio, or related AI features.
 
-1. Go to https://valsea.ai/dashboard/billing
+1. Go to [Valsea Billing](https://valsea.ai/dashboard/billing).
 2. Sign in or create an account.
 3. Choose the Free plan.
 4. Go to **API Keys** in the sidebar.

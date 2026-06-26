@@ -6,9 +6,9 @@ This page explains how to activate available credits and API access for the hack
 
 ## Valsea / Valencia API
 
-Tell hackathon participants:
+Follow these steps:
 
-1. Go to https://valsea.ai/dashboard/billing
+1. Go to [Valsea Billing](https://valsea.ai/dashboard/billing).
 2. Sign in or create an account.
 3. On the Billing page, choose the **Free** plan.
 4. The Free plan includes **55 minutes one-time**.
@@ -34,7 +34,7 @@ Lovable gives participants access to **Pro Plan 1 with 100 credits** at no cost.
 
 ### How to Apply the Event Access
 
-1. Go to https://lovable.dev
+1. Go to [Lovable](https://lovable.dev).
 2. If you do not have an account, click **Get started** and create an account.
 3. If you already have an account, go to **Settings → Plans & Credits**.
 4. Select **Pro Plan 1** with **100 credits**.
@@ -60,7 +60,7 @@ Use Apify for web scraping, automation, and data workflows.
 
 ### Create an Apify Account
 
-1. Go to https://apify.com
+1. Go to [Apify](https://apify.com).
 2. Create an account or sign in.
 3. Open the Apify Console.
 
