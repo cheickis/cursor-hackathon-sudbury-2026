@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cursor Hackathon Sudbury 2026 — Build the North</title>
+<meta name="description" content="Official participant resource page for Cursor Hackathon Sudbury 2026. Registration, Discord, tool setup, credits, API access, and Devpost submission." />
+<meta property="og:title" content="Cursor Hackathon Sudbury 2026 — Build the North" />
+<meta property="og:description" content="Everything participants need before and during the hackathon." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #07080c;
+    --bg-soft: #0d0f16;
+    --card: #11131d;
+    --card-hover: #161927;
+    --border: #20232f;
+    --text: #e7e9f0;
+    --muted: #9197a8;
+    --faint: #6b7080;
+    --accent: #7c5cff;
+    --accent-2: #2dd4bf;
+    --accent-glow: rgba(124, 92, 255, 0.35);
+    --radius: 16px;
+    --maxw: 1080px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  h1, h2, h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height: 1.15; letter-spacing: -0.02em; }
+
+  ::selection { background: var(--accent-glow); }
+
+  /* ---------- Nav ---------- */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    background: rgba(7, 8, 12, 0.72);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 16px; }
+  .brand .dot { width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 14px var(--accent-glow); }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--accent), #5a3fd6);
+    color: #fff; padding: 9px 18px; border-radius: 10px; font-size: 14px; font-weight: 600;
+    box-shadow: 0 6px 20px var(--accent-glow); transition: transform .15s, box-shadow .2s;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 28px var(--accent-glow); }
+  .menu-btn { display: none; background: none; border: 0; color: var(--text); cursor: pointer; }
+
+  @media (max-width: 820px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------- Layout ---------- */
+  section { padding: 88px 24px; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; }
+  .eyebrow { color: var(--accent-2); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+  h2.section-title { font-size: clamp(28px, 4vw, 40px); margin-bottom: 12px; }
+  .section-sub { color: var(--muted); max-width: 620px; margin-bottom: 44px; font-size: 16px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: 120px 24px 100px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(620px 360px at 50% -8%, rgba(124,92,255,0.30), transparent 60%),
+      radial-gradient(520px 320px at 85% 25%, rgba(45,212,191,0.16), transparent 60%),
+      radial-gradient(420px 280px at 12% 35%, rgba(124,92,255,0.14), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 70%);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; max-width: 860px; margin: 0 auto; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border);
+    padding: 7px 16px; border-radius: 999px; font-size: 13px; color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .badge .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 0 rgba(45,212,191,0.6); animation: pulse 2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(45,212,191,0); } 100% { box-shadow: 0 0 0 0 rgba(45,212,191,0); } }
+  .hero h1 {
+    font-size: clamp(44px, 8vw, 88px);
+    background: linear-gradient(180deg, #fff 30%, #b9b3e6 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 18px;
+  }
+  .hero .tagline { font-family: 'Space Grotesk'; font-size: clamp(18px, 3vw, 24px); color: var(--accent-2); font-weight: 600; margin-bottom: 22px; }
+  .hero p.lede { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 auto 38px; }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 15px;
+    transition: transform .15s, box-shadow .2s, background .2s; display: inline-flex; align-items: center; gap: 9px;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), #5a3fd6); color: #fff; box-shadow: 0 8px 30px var(--accent-glow); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 40px var(--accent-glow); }
+  .btn-ghost { background: var(--card); border: 1px solid var(--border); color: var(--text); }
+  .btn-ghost:hover { background: var(--card-hover); transform: translateY(-2px); }
+
+  .hero-meta { display: flex; gap: 36px; justify-content: center; flex-wrap: wrap; margin-top: 56px; }
+  .hero-meta .item { text-align: center; }
+  .hero-meta .k { font-family: 'Space Grotesk'; font-size: 22px; font-weight: 700; color: #fff; }
+  .hero-meta .v { font-size: 13px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+  /* ---------- Cards / grids ---------- */
+  .grid { display: grid; gap: 18px; }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 760px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px; transition: border-color .2s, transform .2s, background .2s;
+  }
+  .card:hover { border-color: #34384a; transform: translateY(-3px); background: var(--card-hover); }
+  .card h3 { font-size: 19px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+  .card p { color: var(--muted); font-size: 15px; }
+  .card .ic { font-size: 22px; }
+  .card a.link { color: var(--accent-2); font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; }
+  .card a.link:hover { gap: 9px; }
+
+  /* steps */
+  .steps { counter-reset: step; display: grid; gap: 14px; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px;
+    transition: border-color .2s, transform .15s;
+  }
+  .step:hover { border-color: #34384a; transform: translateX(3px); }
+  .step .num {
+    counter-increment: step; flex: 0 0 auto;
+    width: 32px; height: 32px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent), #5a3fd6); color: #fff;
+    display: grid; place-items: center; font-weight: 700; font-size: 14px; font-family: 'Space Grotesk';
+  }
+  .step .num::before { content: counter(step); }
+  .step .body { flex: 1; }
+  .step .body strong { font-weight: 600; }
+  .step .body a { color: var(--accent-2); font-weight: 600; }
+  .step .body a:hover { text-decoration: underline; }
+
+  /* setup blocks */
+  .setup-block { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; margin-bottom: 18px; }
+  .setup-block > h3 { font-size: 22px; margin-bottom: 6px; display: flex; align-items: center; gap: 12px; }
+  .setup-block .tag { font-size: 12px; font-weight: 700; color: var(--accent-2); border: 1px solid var(--border); padding: 3px 10px; border-radius: 999px; }
+  .setup-block p.intro { color: var(--muted); margin-bottom: 18px; }
+  .setup-block h4 { font-family: 'Inter'; font-weight: 700; font-size: 15px; margin: 20px 0 10px; color: var(--text); }
+  .setup-block ol, .setup-block ul { padding-left: 22px; color: var(--muted); }
+  .setup-block li { margin-bottom: 7px; }
+  .setup-block li::marker { color: var(--accent); }
+  .setup-block a { color: var(--accent-2); font-weight: 500; }
+  .setup-block a:hover { text-decoration: underline; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .pill { background: var(--bg-soft); border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px; font-size: 13px; color: var(--muted); }
+
+  .note {
+    border-left: 3px solid var(--accent); background: rgba(124,92,255,0.07);
+    padding: 14px 18px; border-radius: 0 10px 10px 0; margin-top: 18px; font-size: 14px; color: var(--muted);
+  }
+  .note strong { color: var(--text); }
+
+  /* checklist */
+  .checklist { display: grid; gap: 10px; }
+  .check { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; }
+  .check .box { flex: 0 0 auto; width: 22px; height: 22px; border-radius: 6px; border: 1px solid var(--accent); display: grid; place-items: center; color: var(--accent-2); font-size: 13px; margin-top: 1px; }
+  .check span { color: var(--muted); }
+
+  /* ---------- FAQ accordion ---------- */
+  .faq-list { display: grid; gap: 12px; }
+  .faq {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+    transition: border-color .2s;
+  }
+  .faq[open] { border-color: #3a3f55; }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 18px 22px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-weight: 600; font-size: 16px; color: var(--text);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus { flex: 0 0 auto; width: 24px; height: 24px; position: relative; transition: transform .25s; color: var(--accent); }
+  .faq summary .plus::before, .faq summary .plus::after { content: ''; position: absolute; background: currentColor; border-radius: 2px; }
+  .faq summary .plus::before { top: 11px; left: 4px; width: 16px; height: 2px; }
+  .faq summary .plus::after { top: 4px; left: 11px; width: 2px; height: 16px; transition: opacity .25s; }
+  .faq[open] summary .plus { transform: rotate(90deg); }
+  .faq[open] summary .plus::after { opacity: 0; }
+  .faq .answer { padding: 0 22px 20px; color: var(--muted); font-size: 15px; }
+  .faq .answer a { color: var(--accent-2); font-weight: 500; }
+  .faq .answer a:hover { text-decoration: underline; }
+  .faq .answer ul { padding-left: 20px; margin-top: 8px; }
+  .faq .answer li { margin-bottom: 4px; }
+
+  .faq-cats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+  .faq-cat { font-size: 13px; color: var(--faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 0; }
+
+  /* ---------- CTA band ---------- */
+  .cta-band {
+    position: relative; text-align: center; border-radius: 24px; overflow: hidden;
+    background: linear-gradient(135deg, #14102b, #0c1a1c); border: 1px solid var(--border); padding: 64px 28px;
+  }
+  .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(500px 240px at 50% 0%, var(--accent-glow), transparent 70%); }
+  .cta-band > * { position: relative; }
+  .cta-band h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 14px; }
+  .cta-band p { color: var(--muted); max-width: 520px; margin: 0 auto 30px; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--border); padding: 48px 24px 60px; }
+  .foot-inner { max-width: var(--maxw); margin: 0 auto; display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+  .foot-brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+  .foot-col h5 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); margin-bottom: 12px; }
+  .foot-col a { display: block; color: var(--muted); font-size: 14px; margin-bottom: 8px; transition: color .2s; }
+  .foot-col a:hover { color: var(--text); }
+  .foot-bottom { max-width: var(--maxw); margin: 36px auto 0; padding-top: 22px; border-top: 1px solid var(--border); color: var(--faint); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .foot-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+
+  .safety { display:flex; gap:10px; align-items:flex-start; background: rgba(45,212,191,0.06); border:1px solid rgba(45,212,191,0.25); border-radius:12px; padding:14px 18px; margin-top:18px; font-size:14px; color:var(--muted); }
+  .safety strong { color: var(--accent-2); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span> Cursor Hackathon Sudbury</a>
+    <nav class="nav-links">
+      <a href="#tracks">Tracks</a>
+      <a href="#start">Start Here</a>
+      <a href="#tools">Tools</a>
+      <a href="#setup">Setup</a>
+      <a href="#credits">Credits</a>
+      <a href="#submit">Submit</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener" class="nav-cta">Register →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <span class="badge"><span class="pulse"></span> Saturday, June 27 · Laurentian University, Sudbury ON</span>
+    <h1>Cursor Hackathon<br>Sudbury 2026</h1>
+    <div class="tagline">Build the North</div>
+    <p class="lede">An AI-focused building competition tackling the real opportunities and challenges of Northern Ontario. Everything you need — registration, Discord, tool setup, credits, and submission — all in one place.</p>
+    <div class="hero-actions">
+      <a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener" class="btn btn-primary">Register on Luma →</a>
+      <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener" class="btn btn-ghost">💬 Join the Discord</a>
+    </div>
+    <div class="hero-meta">
+      <div class="item"><div class="k">Jun 27</div><div class="v">Event Day</div></div>
+      <div class="item"><div class="k">3 Tracks</div><div class="v">Build the North</div></div>
+      <div class="item"><div class="k">180+</div><div class="v">Builders Registered</div></div>
+      <div class="item"><div class="k">All Levels</div><div class="v">No Experience Needed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section id="tracks" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">Pick your challenge</div>
+    <h2 class="section-title">Competition tracks</h2>
+    <p class="section-sub">Three tracks focused on real opportunities and challenges across Northern Ontario. Choose one and build a prototype that makes an impact.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3><span class="ic">🌲</span> Sustainable Northern Ontario</h3>
+        <p>Environmental and climate solutions for the North — energy, conservation, and resilient communities.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic">🏥</span> Health, Safety &amp; Community Well-Being</h3>
+        <p>Healthcare and quality-of-life improvements that strengthen safety and well-being across the region.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ic">⛏️</span> Mining &amp; Industrial Innovation</h3>
+        <p>Safer, smarter industrial operations — bringing AI to one of the North's defining industries.</p>
+      </div>
+    </div>
+    <div class="note" style="margin-top:24px;">The event includes <strong>Cursor credits, refreshments, networking, mentorship, and hands-on support</strong> to help you build AI-powered prototypes.</div>
+  </div>
+</section>
+
+<!-- START HERE -->
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">Before the event</div>
+    <h2 class="section-title">Start here</h2>
+    <p class="section-sub">Complete these steps before the hackathon so you're ready to build from the moment you arrive.</p>
+    <div class="steps">
+      <div class="step"><div class="num"></div><div class="body"><a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener">Register on Luma</a> — secure your spot for the event.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join the Discord channel</a> — all updates and support happen here.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com/downloads" target="_blank" rel="noopener">Install Cursor</a> — the AI code editor we'll use.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://cursor.com" target="_blank" rel="noopener">Create a Cursor account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://lovable.dev" target="_blank" rel="noopener">Create a Lovable account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://apify.com" target="_blank" rel="noopener">Create an Apify account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Create a Valsea / Valencia API account</a>.</div></div>
+      <div class="step"><div class="num"></div><div class="body"><a href="https://devpost.com" target="_blank" rel="noopener">Create or sign in to Devpost</a>.</div></div>
+    </div>
+
+    <h4 style="font-family:'Space Grotesk';font-size:18px;margin:38px 0 16px;">What to bring</h4>
+    <div class="pills">
+      <span class="pill">💻 Laptop</span>
+      <span class="pill">🔌 Charger</span>
+      <span class="pill">⌨️ Cursor installed</span>
+      <span class="pill">📝 Devpost account</span>
+      <span class="pill">💡 A project idea, dataset, or problem</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">What you'll use</div>
+    <h2 class="section-title">Main tools</h2>
+    <p class="section-sub">A focused toolkit for building and shipping fast. Most offer free credits or access for the event.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3><span class="ic">🖱️</span> Cursor</h3>
+        <p>The AI code editor for the hackathon — generate, explain, debug, and ship code.</p>
+        <a class="link" href="https://cursor.com" target="_blank" rel="noopener">Open Cursor →</a>
+      </div>
+      <div class="card">
+        <h3><span class="ic">💜</span> Lovable</h3>
+        <p>Build web apps, dashboards, and prototypes quickly by describing what you want.</p>
+        <a class="link" href="https://lovable.dev" target="_blank" rel="noopener">Open Lovable →</a>
+      </div>
+      <div class="card">
+        <h3><span class="ic">🕸️</span> Apify</h3>
+        <p>Web automation, scraping, and data workflows to feed your AI apps.</p>
+        <a class="link" href="https://apify.com" target="_blank" rel="noopener">Open Apify →</a>
+      </div>
+      <div class="card">
+        <h3><span class="ic">🎙️</span> Valsea / Valencia API</h3>
+        <p>Voice, audio, and speech-based AI features for your project.</p>
+        <a class="link" href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Open Valsea →</a>
+      </div>
+      <div class="card">
+        <h3><span class="ic">🏆</span> Devpost</h3>
+        <p>Where final projects are submitted. The official event link comes from the organizers.</p>
+        <a class="link" href="https://devpost.com" target="_blank" rel="noopener">Open Devpost →</a>
+      </div>
+      <div class="card">
+        <h3><span class="ic">💬</span> Discord</h3>
+        <p>Announcements, questions, support, and team communication throughout the event.</p>
+        <a class="link" href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join Discord →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="setup">
+  <div class="wrap">
+    <div class="eyebrow">Step by step</div>
+    <h2 class="section-title">Tool setup guide</h2>
+    <p class="section-sub">How to set up each of the main tools for the hackathon.</p>
+
+    <div class="setup-block">
+      <h3><span class="tag">01</span> Cursor</h3>
+      <p class="intro">Cursor is the AI code editor we'll use during the hackathon.</p>
+      <h4>Create a Cursor account</h4>
+      <ol>
+        <li>Go to <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a>.</li>
+        <li>Click <strong>Sign in</strong> or <strong>Get started</strong>.</li>
+        <li>Create an account using email, Google, or another sign-in option.</li>
+        <li>Download Cursor: <a href="https://cursor.com/downloads" target="_blank" rel="noopener">Cursor Downloads</a>.</li>
+        <li>Install Cursor, then open it and sign in.</li>
+      </ol>
+      <h4>Start a project</h4>
+      <ul>
+        <li><strong>Option A — New local project:</strong> create a folder, open it in Cursor, and start creating files (README, main app file, frontend/backend folders, team notes).</li>
+        <li><strong>Option B — Existing folder:</strong> open it in Cursor and ask Cursor to help you understand, improve, or debug it.</li>
+      </ul>
+      <h4>Good Cursor prompts</h4>
+      <ul>
+        <li>Create a simple project structure for this hackathon idea.</li>
+        <li>Explain this error and suggest a fix.</li>
+        <li>Help me connect this API key safely.</li>
+        <li>Create a short project description for Devpost.</li>
+        <li>Review this project and tell me what could break during the demo.</li>
+      </ul>
+      <div class="note"><strong>Important:</strong> don't blindly accept AI-generated code. Read it, test it, and make sure you understand what it does.</div>
+    </div>
+
+    <div class="setup-block">
+      <h3><span class="tag">02</span> Lovable</h3>
+      <p class="intro">Lovable helps you quickly create web apps, dashboards, and prototypes.</p>
+      <ol>
+        <li>Go to <a href="https://lovable.dev" target="_blank" rel="noopener">Lovable</a> and create an account or sign in.</li>
+        <li>Start a new project and describe what you want to build.</li>
+        <li>Use Lovable to generate, edit, and improve your app.</li>
+      </ol>
+      <h4>Great for</h4>
+      <div class="pills">
+        <span class="pill">Landing pages</span><span class="pill">Dashboards</span><span class="pill">Demo apps</span><span class="pill">Internal tools</span><span class="pill">Quick prototypes</span>
+      </div>
+    </div>
+
+    <div class="setup-block">
+      <h3><span class="tag">03</span> Apify</h3>
+      <p class="intro">Apify handles web scraping, automation, data collection, and agent workflows.</p>
+      <ol>
+        <li>Go to <a href="https://apify.com" target="_blank" rel="noopener">Apify</a> and create an account or sign in.</li>
+        <li>Open the Apify Console and create or use an Actor.</li>
+        <li>Get your API token from account settings and store it safely in your project.</li>
+      </ol>
+      <h4>Great for</h4>
+      <div class="pills">
+        <span class="pill">Collecting web data</span><span class="pill">Automating browsers</span><span class="pill">Monitoring sites</span><span class="pill">Data pipelines</span>
+      </div>
+    </div>
+
+    <div class="setup-block">
+      <h3><span class="tag">04</span> Valsea / Valencia API</h3>
+      <p class="intro">Use Valsea / Valencia API for voice, audio, or related AI features.</p>
+      <ol>
+        <li>Go to <a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Valsea Billing</a> and sign in or create an account.</li>
+        <li>Choose the Free plan.</li>
+        <li>Open <strong>API Keys</strong> in the sidebar and create or copy your key.</li>
+        <li>Store the key safely in your project.</li>
+      </ol>
+      <div class="note"><strong>Free plan:</strong> includes <strong>55 minutes one-time</strong> with a hard cap — requests stop once credits are exhausted.</div>
+    </div>
+
+    <div class="safety">🔐 <span><strong>API key safety:</strong> never paste private API keys into public documents, screenshots, or shared chats. Keep them inside your own project environment only.</span></div>
+  </div>
+</section>
+
+<!-- CREDITS -->
+<section id="credits" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">Free for participants</div>
+    <h2 class="section-title">Credits &amp; API access</h2>
+    <p class="section-sub">How to activate the credits and API access available during the hackathon. Event codes are shared with registered participants — please don't share them outside the event.</p>
+
+    <div class="setup-block">
+      <h3>🎙️ Valsea / Valencia API</h3>
+      <ol>
+        <li>Go to <a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Valsea Billing</a> and sign in or create an account.</li>
+        <li>On the Billing page, choose the <strong>Free</strong> plan (includes <strong>55 minutes one-time</strong>).</li>
+        <li>Open <strong>API Keys</strong> in the sidebar and create or copy your key.</li>
+        <li>Use that key in your project with the Valencia API.</li>
+        <li>Track usage under <strong>Billing</strong> or <strong>Analytics</strong>.</li>
+      </ol>
+      <div class="note">The Free plan has a hard cap, so requests stop once credits are exhausted.</div>
+    </div>
+
+    <div class="setup-block">
+      <h3>💜 Lovable Credits</h3>
+      <p class="intro">Lovable gives participants <strong>Pro Plan 1 with 100 credits</strong> at no cost, unlocking all Pro Plan 1 features for the duration of the plan.</p>
+      <h4>How to apply the event access</h4>
+      <ol>
+        <li>Go to <a href="https://lovable.dev" target="_blank" rel="noopener">Lovable</a>. New users click <strong>Get started</strong>; existing users go to <strong>Settings → Plans &amp; Credits</strong>.</li>
+        <li>Select <strong>Pro Plan 1</strong> with <strong>100 credits</strong>.</li>
+        <li>Choose the <strong>monthly</strong> plan.</li>
+        <li>At checkout, enter the event discount code and complete checkout.</li>
+      </ol>
+      <div class="note">Already have a paid Lovable account? Create a new workspace to redeem the event access. You may be asked for payment details, but you have one month to cancel — you can cancel as soon as it's activated. The event code must be redeemed by the end of the event.</div>
+    </div>
+
+    <div class="setup-block">
+      <h3>🕸️ Apify Credits</h3>
+      <h4>Apply a promo code</h4>
+      <ol>
+        <li>In Apify, go to <strong>Billing → Subscription</strong>.</li>
+        <li>Scroll to <strong>Special offers</strong> and click <strong>Add promo code</strong>.</li>
+        <li>Enter the event promo code, then save and confirm it applied.</li>
+      </ol>
+      <h4>Create an API token</h4>
+      <ol>
+        <li>In Apify Console, go to <strong>Settings</strong>.</li>
+        <li>Open <strong>API &amp; Integrations</strong>.</li>
+        <li>Copy your API token and store it safely in your project.</li>
+      </ol>
+      <div class="note">The Apify event code is shared with registered participants if available. Please don't share it outside the event.</div>
+    </div>
+
+    <div class="safety">⚠️ <span><strong>Do not share</strong> event discount codes or private access information outside the hackathon.</span></div>
+  </div>
+</section>
+
+<!-- SUBMIT -->
+<section id="submit">
+  <div class="wrap">
+    <div class="eyebrow">Devpost</div>
+    <h2 class="section-title">Submitting your project</h2>
+    <p class="section-sub">Final projects are submitted on Devpost. The official event submission link is shared by the organizers.</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>📦 What to submit</h3>
+        <ul style="padding-left:20px;color:var(--muted);font-size:15px;">
+          <li>Project name &amp; team name</li>
+          <li>Team members</li>
+          <li>Short project description</li>
+          <li>Problem being solved &amp; solution overview</li>
+          <li>Tools used</li>
+          <li>Demo link, video, or screenshots</li>
+          <li>What's working &amp; what's in progress</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📝 Describe your project</h3>
+        <p style="margin-bottom:8px;">Your description should answer:</p>
+        <ul style="padding-left:20px;color:var(--muted);font-size:15px;">
+          <li>What problem are you solving?</li>
+          <li>Who does this help?</li>
+          <li>What did you build &amp; how does it work?</li>
+          <li>Which tools did you use?</li>
+          <li>What's working now?</li>
+          <li>What would you improve with more time?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:18px;">
+      <div class="card">
+        <h3>🎬 Demo tips</h3>
+        <p>Keep it short, clear, and focused. A good demo shows the problem, the solution, the working prototype, the tools used, and the impact. Don't over-explain — show what works.</p>
+      </div>
+      <div class="card">
+        <h3>✅ Before submitting</h3>
+        <div class="checklist" style="margin-top:6px;">
+          <div class="check"><span class="box">✓</span><span>Clear project name</span></div>
+          <div class="check"><span class="box">✓</span><span>All team members listed</span></div>
+          <div class="check"><span class="box">✓</span><span>Demo link / screenshots work</span></div>
+          <div class="check"><span class="box">✓</span><span>Tools used are mentioned</span></div>
+          <div class="check"><span class="box">✓</span><span>No private API keys exposed</span></div>
+          <div class="check"><span class="box">✓</span><span>Submitted before the deadline</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://devpost.com" target="_blank" rel="noopener" class="btn btn-primary">Open Devpost →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2 class="section-title">Frequently asked</h2>
+    <p class="section-sub">Can't find your answer? Ask in the <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener" style="color:var(--accent-2);font-weight:600;">Discord channel</a> or talk to an organizer during the event.</p>
+
+    <div class="faq-list">
+      <details class="faq"><summary>When and where is the event?<span class="plus"></span></summary><div class="answer">The event is on <strong>Saturday, June 27, 2026</strong> in Sudbury, Canada.</div></details>
+      <details class="faq"><summary>Where do I register?<span class="plus"></span></summary><div class="answer">Register on Luma: <a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener">Register on Luma</a>.</div></details>
+      <details class="faq"><summary>Where do I get event updates?<span class="plus"></span></summary><div class="answer">All important updates are shared through Discord. Please <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">join the Discord</a> before the event.</div></details>
+      <details class="faq"><summary>Do I need to join Discord?<span class="plus"></span></summary><div class="answer">Yes. Discord is used for announcements, schedule updates, team formation, tool setup help, submission reminders, and questions during the hackathon. <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join the Discord</a>.</div></details>
+      <details class="faq"><summary>Do I need a GitHub account?<span class="plus"></span></summary><div class="answer">No. Participants don't need a GitHub account — the event uses Devpost for project submissions.</div></details>
+      <details class="faq"><summary>Do I need a Devpost account?<span class="plus"></span></summary><div class="answer">Yes. Devpost is used for final submission. <a href="https://devpost.com" target="_blank" rel="noopener">Create or sign in here</a>. The official event submission link is shared by the organizers.</div></details>
+      <details class="faq"><summary>Do I need Cursor installed and an account?<span class="plus"></span></summary><div class="answer">Yes to both. <a href="https://cursor.com/downloads" target="_blank" rel="noopener">Download Cursor</a> and <a href="https://cursor.com" target="_blank" rel="noopener">create an account</a> before the event.</div></details>
+      <details class="faq"><summary>Do I need to know how to code?<span class="plus"></span></summary><div class="answer">You don't need to be an expert. Cursor and the other tools can help you build, debug, and explain code. Teams are encouraged to work together.</div></details>
+      <details class="faq"><summary>Can I use AI tools?<span class="plus"></span></summary><div class="answer">Yes — you're encouraged to use Cursor and other AI tools. Just make sure you understand and test the code you use.</div></details>
+      <details class="faq"><summary>How do I activate Lovable credits?<span class="plus"></span></summary><div class="answer">Follow the Lovable instructions in the <a href="#credits">Credits &amp; API Access</a> section. The event discount code is shared with registered participants during the event and should not be shared outside it.</div></details>
+      <details class="faq"><summary>How do I activate Apify credits?<span class="plus"></span></summary><div class="answer">Follow the Apify instructions in the <a href="#credits">Credits &amp; API Access</a> section. If an event code is available, it's shared with registered participants.</div></details>
+      <details class="faq"><summary>What does the Valsea / Valencia Free plan include?<span class="plus"></span></summary><div class="answer">The Free plan includes <strong>55 minutes one-time</strong> with a hard cap, so requests stop once credits are exhausted.</div></details>
+      <details class="faq"><summary>Should I share my API keys?<span class="plus"></span></summary><div class="answer">No. Never share API keys publicly. Keep them private and store them safely in your own project.</div></details>
+      <details class="faq"><summary>What should my team submit?<span class="plus"></span></summary><div class="answer">Submit on Devpost. At minimum: project name, team members, short description, a working demo or prototype, demo link / video / screenshots if available, and a list of tools used.</div></details>
+      <details class="faq"><summary>Can I work alone or join a team at the event?<span class="plus"></span></summary><div class="answer">You can work alone (unless organizers announce a different team rule), and you can form or join teams during the event.</div></details>
+      <details class="faq"><summary>Can I start with an existing idea?<span class="plus"></span></summary><div class="answer">Yes — you can bring an idea, but the main building should happen during the hackathon.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="wrap">
+    <div class="eyebrow">Made possible by</div>
+    <h2 class="section-title">Sponsors &amp; partners</h2>
+    <p class="section-sub">Presented by the Cursor Sudbury, Canada community — with support from these partners.</p>
+    <h4 style="font-family:'Space Grotesk';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Sponsors</h4>
+    <div class="pills" style="margin-bottom:30px;">
+      <span class="pill" style="font-size:15px;padding:8px 16px;">Key Logic Software Solutions</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">The Foundry / La Fonderie</span>
+    </div>
+    <h4 style="font-family:'Space Grotesk';font-size:15px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Supporting partners</h4>
+    <div class="pills">
+      <span class="pill" style="font-size:15px;padding:8px 16px;">Cursor</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">TiDB by PingCAP</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">Apify</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">ElevenLabs</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">Lovable</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">NVIDIA</span>
+      <span class="pill" style="font-size:15px;padding:8px 16px;">Valsea AI</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Ready to build the North?</h2>
+      <p>Register, join the Discord, and set up your tools. We'll see you on June 27.</p>
+      <div class="hero-actions">
+        <a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener" class="btn btn-primary">Register on Luma →</a>
+        <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener" class="btn btn-ghost">💬 Join the Discord</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Cursor Hackathon Sudbury 2026</div>
+      <div style="color:var(--muted);font-size:14px;max-width:300px;">Build the North · Saturday, June 27<br>Cliff Fielding Building, Laurentian University<br>935 Ramsey Lake Rd, Sudbury, ON</div>
+      <div style="color:var(--faint);font-size:13px;margin-top:14px;max-width:300px;">Hosted by Athif Shaffy, Cheick Ismael Maiga, Baljinder Maan &amp; Hasan Shahriar</div>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h5>Event</h5>
+        <a href="https://luma.com/cursor-llwi" target="_blank" rel="noopener">Register on Luma</a>
+        <a href="https://discord.gg/Px5hHgSCt" target="_blank" rel="noopener">Join Discord</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h5>Tools</h5>
+        <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a>
+        <a href="https://lovable.dev" target="_blank" rel="noopener">Lovable</a>
+        <a href="https://apify.com" target="_blank" rel="noopener">Apify</a>
+        <a href="https://valsea.ai/dashboard/billing" target="_blank" rel="noopener">Valsea / Valencia</a>
+      </div>
+      <div class="foot-col">
+        <h5>Build &amp; Submit</h5>
+        <a href="#setup">Tool Setup</a>
+        <a href="#credits">Credits &amp; API</a>
+        <a href="https://devpost.com" target="_blank" rel="noopener">Devpost</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Cursor Hackathon Sudbury · Participant Resources</span>
+    <span>Made with Cursor 🖱️</span>
+  </div>
+</footer>
+
+</body>
+</html>
